@@ -24,7 +24,7 @@ router.get('/headings', (req,res, next)=>{
 /* GET users listing. */
 router.get('/:timestamp', function (req, res, next) {
 
-    db.collection('posMap_accumulated_days_5').find({ id: Number(req.params.timestamp) }, (err, result) => {
+    db.collection('posMap_1_accumulated_days').find({ id: Number(req.params.timestamp) }, (err, result) => {
         //console.log(err, result, req.params.timestamp);
         console.log(result[0].positionMap.length);
         try {

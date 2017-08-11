@@ -15,7 +15,7 @@ router.get('/range/:range', (req,res, next)=>{
         range
     } = req.params;
   
-    db.collection(`links_durations_${range}_total`).find({ }, (err, result) => {
+    db.collection(`links_durations_1_${range}_total`).find({ }, (err, result) => {
         try {
             res.json(result);
         } catch (e) {
@@ -29,7 +29,7 @@ router.get('/range/:range/eastbound', (req,res, next)=>{
         range
     } = req.params;
   
-    db.collection(`links_durations_${range}_eastbound`).find({ }, (err, result) => {
+    db.collection(`links_durations_1_${range}_eastbound`).find({ }, (err, result) => {
         try {
             res.json(result);
         } catch (e) {
@@ -43,7 +43,7 @@ router.get('/range/:range/westbound', (req,res, next)=>{
         range
     } = req.params;
   
-    db.collection(`links_durations_${range}_westbound`).find({ }, (err, result) => {
+    db.collection(`links_durations_1_${range}_westbound`).find({ }, (err, result) => {
         try {
             res.json(result);
         } catch (e) {
@@ -57,7 +57,7 @@ router.get('/range/:range/encounter', (req,res, next)=>{
         range
     } = req.params;
   
-    db.collection(`links_durations_${range}_encounter`).find({ }, (err, result) => {
+    db.collection(`links_durations_1_${range}_encounter`).find({ }, (err, result) => {
         try {
             res.json(result);
         } catch (e) {
